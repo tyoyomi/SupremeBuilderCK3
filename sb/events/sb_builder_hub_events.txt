@@ -1,0 +1,87 @@
+namespace = sb_builder
+
+# Fill Empty — cost mode hub
+sb_builder.1001 = {
+	type = character_event
+	title = sb_builder.1001.t
+	theme = realm
+	override_background = { reference = throne_room }
+
+	desc = sb_builder.1001.desc
+
+	immediate = {
+		sb_compute_fill_plan_effect = yes
+	}
+
+	option = {
+		name = sb_builder.1001.close
+		custom_tooltip = sb_builder.tt.close
+	}
+
+	option = {
+		name = sb_builder.1001.c1
+		custom_tooltip = sb_builder.tt.fill_c1
+		trigger = {
+			var:sb_plan_count > 0
+		}
+		sb_fill_affordable_effect = yes
+		custom_tooltip = sb_builder.tt.result
+	}
+
+	option = {
+		name = sb_builder.1001.c2
+		custom_tooltip = sb_builder.tt.fill_c2
+		trigger = {
+			custom_tooltip = {
+				text = sb_tt_can_afford_fill_plan
+				var:sb_plan_count > 0
+				sb_can_afford_fill_plan = yes
+			}
+		}
+		sb_fill_all_effect = yes
+		custom_tooltip = sb_builder.tt.result
+	}
+}
+
+# Upgrade Domain — cost mode hub
+sb_builder.1002 = {
+	type = character_event
+	title = sb_builder.1002.t
+	theme = realm
+	override_background = { reference = throne_room }
+
+	desc = sb_builder.1002.desc
+
+	immediate = {
+		sb_compute_upgrade_plan_effect = yes
+	}
+
+	option = {
+		name = sb_builder.1002.close
+		custom_tooltip = sb_builder.tt.close
+	}
+
+	option = {
+		name = sb_builder.1002.c1
+		custom_tooltip = sb_builder.tt.upgrade_c1
+		trigger = {
+			var:sb_plan_count > 0
+		}
+		sb_upgrade_affordable_effect = yes
+		custom_tooltip = sb_builder.tt.result
+	}
+
+	option = {
+		name = sb_builder.1002.c2
+		custom_tooltip = sb_builder.tt.upgrade_c2
+		trigger = {
+			custom_tooltip = {
+				text = sb_tt_can_afford_upgrade_plan
+				var:sb_plan_count > 0
+				sb_can_afford_upgrade_plan = yes
+			}
+		}
+		sb_upgrade_all_effect = yes
+		custom_tooltip = sb_builder.tt.result
+	}
+}

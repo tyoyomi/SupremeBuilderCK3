@@ -1,0 +1,2380 @@
+# Supreme Builder — per-line fill / upgrade eligibility (province scope; root = player)
+
+# Catalog order: economy → military → fort. Special/duchy buildings excluded.
+
+sb_can_fill_cereal_fields = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = cereal_fields_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_cereal_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_cereal_fields_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = cereal_fields_01
+	NOT = { has_building_or_higher = cereal_fields_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_cereal_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_cereal_fields_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = cereal_fields_02
+	NOT = { has_building_or_higher = cereal_fields_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_cereal_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_cereal_fields_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = cereal_fields_03
+	NOT = { has_building_or_higher = cereal_fields_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_cereal_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_cereal_fields_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = cereal_fields_04
+	NOT = { has_building_or_higher = cereal_fields_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_cereal_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_cereal_fields_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = cereal_fields_05
+	NOT = { has_building_or_higher = cereal_fields_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_cereal_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_cereal_fields_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = cereal_fields_06
+	NOT = { has_building_or_higher = cereal_fields_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_cereal_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_cereal_fields_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = cereal_fields_07
+	NOT = { has_building_or_higher = cereal_fields_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_cereal_fields_requirement_terrain = yes
+}
+
+sb_can_fill_pastures = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = pastures_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_pastures_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = pastures_01
+	NOT = { has_building_or_higher = pastures_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_pastures_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = pastures_02
+	NOT = { has_building_or_higher = pastures_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_pastures_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = pastures_03
+	NOT = { has_building_or_higher = pastures_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_pastures_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = pastures_04
+	NOT = { has_building_or_higher = pastures_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_pastures_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = pastures_05
+	NOT = { has_building_or_higher = pastures_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_pastures_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = pastures_06
+	NOT = { has_building_or_higher = pastures_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_pastures_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = pastures_07
+	NOT = { has_building_or_higher = pastures_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_pastures_requirement_terrain = yes
+}
+
+sb_can_fill_hunting_grounds = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = hunting_grounds_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_hunting_grounds_requirement_terrain = yes
+	root.culture = { NOT = { has_cultural_parameter = vegetarian_building_ban } }
+}
+
+sb_can_upgrade_hunting_grounds_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hunting_grounds_01
+	NOT = { has_building_or_higher = hunting_grounds_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_hunting_grounds_requirement_terrain = yes
+}
+
+sb_can_upgrade_hunting_grounds_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hunting_grounds_02
+	NOT = { has_building_or_higher = hunting_grounds_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_hunting_grounds_requirement_terrain = yes
+}
+
+sb_can_upgrade_hunting_grounds_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hunting_grounds_03
+	NOT = { has_building_or_higher = hunting_grounds_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_hunting_grounds_requirement_terrain = yes
+}
+
+sb_can_upgrade_hunting_grounds_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hunting_grounds_04
+	NOT = { has_building_or_higher = hunting_grounds_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_hunting_grounds_requirement_terrain = yes
+}
+
+sb_can_upgrade_hunting_grounds_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hunting_grounds_05
+	NOT = { has_building_or_higher = hunting_grounds_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_hunting_grounds_requirement_terrain = yes
+}
+
+sb_can_upgrade_hunting_grounds_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hunting_grounds_06
+	NOT = { has_building_or_higher = hunting_grounds_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_hunting_grounds_requirement_terrain = yes
+}
+
+sb_can_upgrade_hunting_grounds_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hunting_grounds_07
+	NOT = { has_building_or_higher = hunting_grounds_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_hunting_grounds_requirement_terrain = yes
+}
+
+sb_can_fill_logging_camps = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = logging_camps_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_logging_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_logging_camps_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = logging_camps_01
+	NOT = { has_building_or_higher = logging_camps_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_logging_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_logging_camps_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = logging_camps_02
+	NOT = { has_building_or_higher = logging_camps_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_logging_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_logging_camps_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = logging_camps_03
+	NOT = { has_building_or_higher = logging_camps_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_logging_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_logging_camps_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = logging_camps_04
+	NOT = { has_building_or_higher = logging_camps_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_logging_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_logging_camps_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = logging_camps_05
+	NOT = { has_building_or_higher = logging_camps_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_logging_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_logging_camps_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = logging_camps_06
+	NOT = { has_building_or_higher = logging_camps_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_logging_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_logging_camps_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = logging_camps_07
+	NOT = { has_building_or_higher = logging_camps_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_logging_camps_requirement_terrain = yes
+}
+
+sb_can_fill_peat_quarries = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = peat_quarries_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_peat_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_peat_quarries_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = peat_quarries_01
+	NOT = { has_building_or_higher = peat_quarries_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_peat_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_peat_quarries_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = peat_quarries_02
+	NOT = { has_building_or_higher = peat_quarries_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_peat_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_peat_quarries_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = peat_quarries_03
+	NOT = { has_building_or_higher = peat_quarries_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_peat_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_peat_quarries_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = peat_quarries_04
+	NOT = { has_building_or_higher = peat_quarries_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_peat_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_peat_quarries_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = peat_quarries_05
+	NOT = { has_building_or_higher = peat_quarries_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_peat_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_peat_quarries_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = peat_quarries_06
+	NOT = { has_building_or_higher = peat_quarries_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_peat_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_peat_quarries_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = peat_quarries_07
+	NOT = { has_building_or_higher = peat_quarries_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_peat_quarries_requirement_terrain = yes
+}
+
+sb_can_fill_quarries = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = quarries_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_quarries_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = quarries_01
+	NOT = { has_building_or_higher = quarries_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_quarries_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = quarries_02
+	NOT = { has_building_or_higher = quarries_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_quarries_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = quarries_03
+	NOT = { has_building_or_higher = quarries_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_quarries_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = quarries_04
+	NOT = { has_building_or_higher = quarries_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_quarries_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = quarries_05
+	NOT = { has_building_or_higher = quarries_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_quarries_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = quarries_06
+	NOT = { has_building_or_higher = quarries_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_quarries_requirement_terrain = yes
+}
+
+sb_can_upgrade_quarries_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = quarries_07
+	NOT = { has_building_or_higher = quarries_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_quarries_requirement_terrain = yes
+}
+
+sb_can_fill_orchards = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = orchards_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_orchards_requirement_terrain = yes
+}
+
+sb_can_upgrade_orchards_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = orchards_01
+	NOT = { has_building_or_higher = orchards_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_orchards_requirement_terrain = yes
+}
+
+sb_can_upgrade_orchards_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = orchards_02
+	NOT = { has_building_or_higher = orchards_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_orchards_requirement_terrain = yes
+}
+
+sb_can_upgrade_orchards_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = orchards_03
+	NOT = { has_building_or_higher = orchards_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_orchards_requirement_terrain = yes
+}
+
+sb_can_upgrade_orchards_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = orchards_04
+	NOT = { has_building_or_higher = orchards_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_orchards_requirement_terrain = yes
+}
+
+sb_can_upgrade_orchards_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = orchards_05
+	NOT = { has_building_or_higher = orchards_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_orchards_requirement_terrain = yes
+}
+
+sb_can_upgrade_orchards_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = orchards_06
+	NOT = { has_building_or_higher = orchards_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_orchards_requirement_terrain = yes
+}
+
+sb_can_upgrade_orchards_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = orchards_07
+	NOT = { has_building_or_higher = orchards_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_orchards_requirement_terrain = yes
+}
+
+sb_can_fill_hill_farms = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = hill_farms_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_hill_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_farms_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_farms_01
+	NOT = { has_building_or_higher = hill_farms_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_hill_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_farms_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_farms_02
+	NOT = { has_building_or_higher = hill_farms_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_hill_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_farms_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_farms_03
+	NOT = { has_building_or_higher = hill_farms_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_hill_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_farms_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_farms_04
+	NOT = { has_building_or_higher = hill_farms_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_hill_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_farms_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_farms_05
+	NOT = { has_building_or_higher = hill_farms_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_hill_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_farms_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_farms_06
+	NOT = { has_building_or_higher = hill_farms_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_hill_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_farms_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_farms_07
+	NOT = { has_building_or_higher = hill_farms_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_hill_farms_requirement_terrain = yes
+}
+
+sb_can_fill_plantations = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = plantations_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_plantations_requirement_terrain = yes
+}
+
+sb_can_upgrade_plantations_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = plantations_01
+	NOT = { has_building_or_higher = plantations_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_plantations_requirement_terrain = yes
+}
+
+sb_can_upgrade_plantations_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = plantations_02
+	NOT = { has_building_or_higher = plantations_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_plantations_requirement_terrain = yes
+}
+
+sb_can_upgrade_plantations_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = plantations_03
+	NOT = { has_building_or_higher = plantations_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_plantations_requirement_terrain = yes
+}
+
+sb_can_upgrade_plantations_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = plantations_04
+	NOT = { has_building_or_higher = plantations_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_plantations_requirement_terrain = yes
+}
+
+sb_can_upgrade_plantations_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = plantations_05
+	NOT = { has_building_or_higher = plantations_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_plantations_requirement_terrain = yes
+}
+
+sb_can_upgrade_plantations_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = plantations_06
+	NOT = { has_building_or_higher = plantations_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_plantations_requirement_terrain = yes
+}
+
+sb_can_upgrade_plantations_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = plantations_07
+	NOT = { has_building_or_higher = plantations_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_plantations_requirement_terrain = yes
+}
+
+sb_can_fill_elephant_pens = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = elephant_pens_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_elephant_pens_requirement_terrain = yes
+}
+
+sb_can_upgrade_elephant_pens_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = elephant_pens_01
+	NOT = { has_building_or_higher = elephant_pens_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_elephant_pens_requirement_terrain = yes
+}
+
+sb_can_upgrade_elephant_pens_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = elephant_pens_02
+	NOT = { has_building_or_higher = elephant_pens_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_elephant_pens_requirement_terrain = yes
+}
+
+sb_can_upgrade_elephant_pens_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = elephant_pens_03
+	NOT = { has_building_or_higher = elephant_pens_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_elephant_pens_requirement_terrain = yes
+}
+
+sb_can_upgrade_elephant_pens_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = elephant_pens_04
+	NOT = { has_building_or_higher = elephant_pens_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_elephant_pens_requirement_terrain = yes
+}
+
+sb_can_upgrade_elephant_pens_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = elephant_pens_05
+	NOT = { has_building_or_higher = elephant_pens_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_elephant_pens_requirement_terrain = yes
+}
+
+sb_can_upgrade_elephant_pens_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = elephant_pens_06
+	NOT = { has_building_or_higher = elephant_pens_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_elephant_pens_requirement_terrain = yes
+}
+
+sb_can_upgrade_elephant_pens_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = elephant_pens_07
+	NOT = { has_building_or_higher = elephant_pens_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_elephant_pens_requirement_terrain = yes
+}
+
+sb_can_fill_farm_estates = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = farm_estates_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	OR = {
+		building_farm_estates_requirement_terrain = yes
+		AND = {
+			has_building_or_higher = pastures_04
+			culture = { has_cultural_parameter = farm_estates_pastures_unlock }
+		}
+		building_paddy_fields_requirement_terrain = yes
+	}
+}
+
+sb_can_upgrade_farm_estates_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = farm_estates_01
+	NOT = { has_building_or_higher = farm_estates_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+		building_farm_estates_requirement_terrain = yes
+		building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_farm_estates_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = farm_estates_02
+	NOT = { has_building_or_higher = farm_estates_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+		building_farm_estates_requirement_terrain = yes
+		building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_farm_estates_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = farm_estates_03
+	NOT = { has_building_or_higher = farm_estates_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+		building_farm_estates_requirement_terrain = yes
+		building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_farm_estates_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = farm_estates_04
+	NOT = { has_building_or_higher = farm_estates_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+		building_farm_estates_requirement_terrain = yes
+		building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_farm_estates_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = farm_estates_05
+	NOT = { has_building_or_higher = farm_estates_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+		building_farm_estates_requirement_terrain = yes
+		building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_farm_estates_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = farm_estates_06
+	NOT = { has_building_or_higher = farm_estates_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+		building_farm_estates_requirement_terrain = yes
+		building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_farm_estates_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = farm_estates_07
+	NOT = { has_building_or_higher = farm_estates_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+		building_farm_estates_requirement_terrain = yes
+		building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_fill_paddy_fields = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = paddy_fields_01 }
+	building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_paddy_fields_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = paddy_fields_01
+	NOT = { has_building_or_higher = paddy_fields_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_paddy_fields_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = paddy_fields_02
+	NOT = { has_building_or_higher = paddy_fields_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_paddy_fields_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = paddy_fields_03
+	NOT = { has_building_or_higher = paddy_fields_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_paddy_fields_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = paddy_fields_04
+	NOT = { has_building_or_higher = paddy_fields_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_paddy_fields_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = paddy_fields_05
+	NOT = { has_building_or_higher = paddy_fields_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_paddy_fields_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = paddy_fields_06
+	NOT = { has_building_or_higher = paddy_fields_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_upgrade_paddy_fields_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = paddy_fields_07
+	NOT = { has_building_or_higher = paddy_fields_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_paddy_fields_requirement_terrain = yes
+}
+
+sb_can_fill_common_tradeport = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = common_tradeport_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_common_tradeport_requirement_terrain = yes
+}
+
+sb_can_upgrade_common_tradeport_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = common_tradeport_01
+	NOT = { has_building_or_higher = common_tradeport_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_common_tradeport_requirement_terrain = yes
+}
+
+sb_can_upgrade_common_tradeport_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = common_tradeport_02
+	NOT = { has_building_or_higher = common_tradeport_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_common_tradeport_requirement_terrain = yes
+}
+
+sb_can_upgrade_common_tradeport_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = common_tradeport_03
+	NOT = { has_building_or_higher = common_tradeport_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_common_tradeport_requirement_terrain = yes
+}
+
+sb_can_upgrade_common_tradeport_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = common_tradeport_04
+	NOT = { has_building_or_higher = common_tradeport_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_common_tradeport_requirement_terrain = yes
+}
+
+sb_can_upgrade_common_tradeport_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = common_tradeport_05
+	NOT = { has_building_or_higher = common_tradeport_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_common_tradeport_requirement_terrain = yes
+}
+
+sb_can_upgrade_common_tradeport_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = common_tradeport_06
+	NOT = { has_building_or_higher = common_tradeport_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_common_tradeport_requirement_terrain = yes
+}
+
+sb_can_upgrade_common_tradeport_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = common_tradeport_07
+	NOT = { has_building_or_higher = common_tradeport_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_common_tradeport_requirement_terrain = yes
+}
+
+sb_can_fill_qanats = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = qanats_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_qanats_requirement_terrain = yes
+}
+
+sb_can_upgrade_qanats_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = qanats_01
+	NOT = { has_building_or_higher = qanats_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_qanats_requirement_terrain = yes
+}
+
+sb_can_upgrade_qanats_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = qanats_02
+	NOT = { has_building_or_higher = qanats_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_qanats_requirement_terrain = yes
+}
+
+sb_can_upgrade_qanats_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = qanats_03
+	NOT = { has_building_or_higher = qanats_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_qanats_requirement_terrain = yes
+}
+
+sb_can_upgrade_qanats_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = qanats_04
+	NOT = { has_building_or_higher = qanats_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_qanats_requirement_terrain = yes
+}
+
+sb_can_upgrade_qanats_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = qanats_05
+	NOT = { has_building_or_higher = qanats_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_qanats_requirement_terrain = yes
+}
+
+sb_can_upgrade_qanats_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = qanats_06
+	NOT = { has_building_or_higher = qanats_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_qanats_requirement_terrain = yes
+}
+
+sb_can_upgrade_qanats_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = qanats_07
+	NOT = { has_building_or_higher = qanats_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_qanats_requirement_terrain = yes
+}
+
+sb_can_fill_murex_farm = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = murex_farm_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_murex_farm_requirement_terrain = yes
+	county = { NOT = { has_county_modifier = backwater_county_modifier } }
+}
+
+sb_can_upgrade_murex_farm_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = murex_farm_01
+	NOT = { has_building_or_higher = murex_farm_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_murex_farm_requirement_terrain = yes
+}
+
+sb_can_upgrade_murex_farm_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = murex_farm_02
+	NOT = { has_building_or_higher = murex_farm_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_murex_farm_requirement_terrain = yes
+}
+
+sb_can_upgrade_murex_farm_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = murex_farm_03
+	NOT = { has_building_or_higher = murex_farm_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_murex_farm_requirement_terrain = yes
+}
+
+sb_can_upgrade_murex_farm_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = murex_farm_04
+	NOT = { has_building_or_higher = murex_farm_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_murex_farm_requirement_terrain = yes
+}
+
+sb_can_upgrade_murex_farm_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = murex_farm_05
+	NOT = { has_building_or_higher = murex_farm_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_murex_farm_requirement_terrain = yes
+}
+
+sb_can_upgrade_murex_farm_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = murex_farm_06
+	NOT = { has_building_or_higher = murex_farm_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_murex_farm_requirement_terrain = yes
+}
+
+sb_can_upgrade_murex_farm_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = murex_farm_07
+	NOT = { has_building_or_higher = murex_farm_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_murex_farm_requirement_terrain = yes
+}
+
+sb_can_fill_spice_plantation = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = spice_plantation_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_spice_plantation_requirement_terrain = yes
+	county = { NOT = { has_county_modifier = backwater_county_modifier } }
+}
+
+sb_can_upgrade_spice_plantation_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = spice_plantation_01
+	NOT = { has_building_or_higher = spice_plantation_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_spice_plantation_requirement_terrain = yes
+}
+
+sb_can_upgrade_spice_plantation_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = spice_plantation_02
+	NOT = { has_building_or_higher = spice_plantation_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_spice_plantation_requirement_terrain = yes
+}
+
+sb_can_upgrade_spice_plantation_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = spice_plantation_03
+	NOT = { has_building_or_higher = spice_plantation_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_spice_plantation_requirement_terrain = yes
+}
+
+sb_can_upgrade_spice_plantation_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = spice_plantation_04
+	NOT = { has_building_or_higher = spice_plantation_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_spice_plantation_requirement_terrain = yes
+}
+
+sb_can_upgrade_spice_plantation_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = spice_plantation_05
+	NOT = { has_building_or_higher = spice_plantation_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_spice_plantation_requirement_terrain = yes
+}
+
+sb_can_upgrade_spice_plantation_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = spice_plantation_06
+	NOT = { has_building_or_higher = spice_plantation_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_spice_plantation_requirement_terrain = yes
+}
+
+sb_can_upgrade_spice_plantation_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = spice_plantation_07
+	NOT = { has_building_or_higher = spice_plantation_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_spice_plantation_requirement_terrain = yes
+}
+
+sb_can_fill_waterworks = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = waterworks_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_waterworks_requirement_terrain = yes
+	county = { NOT = { has_county_modifier = backwater_county_modifier } }
+}
+
+sb_can_upgrade_waterworks_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = waterworks_01
+	NOT = { has_building_or_higher = waterworks_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_waterworks_requirement_terrain = yes
+}
+
+sb_can_upgrade_waterworks_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = waterworks_02
+	NOT = { has_building_or_higher = waterworks_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_waterworks_requirement_terrain = yes
+}
+
+sb_can_upgrade_waterworks_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = waterworks_03
+	NOT = { has_building_or_higher = waterworks_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_waterworks_requirement_terrain = yes
+}
+
+sb_can_upgrade_waterworks_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = waterworks_04
+	NOT = { has_building_or_higher = waterworks_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_waterworks_requirement_terrain = yes
+}
+
+sb_can_upgrade_waterworks_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = waterworks_05
+	NOT = { has_building_or_higher = waterworks_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_waterworks_requirement_terrain = yes
+}
+
+sb_can_upgrade_waterworks_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = waterworks_06
+	NOT = { has_building_or_higher = waterworks_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_waterworks_requirement_terrain = yes
+}
+
+sb_can_upgrade_waterworks_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = waterworks_07
+	NOT = { has_building_or_higher = waterworks_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_waterworks_requirement_terrain = yes
+}
+
+sb_can_fill_watermills = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = watermills_01 }
+	OR = {
+		building_watermills_requirement_terrain = yes
+		AND = {
+			has_building_or_higher = logging_camps_04
+			culture = { has_cultural_parameter = watermills_forestries_unlock }
+		}
+	}
+	OR = {
+		root.culture = { has_innovation = innovation_windmills }
+		AND = {
+			root.culture = { has_cultural_parameter = next_level_w_mills }
+			root.culture = { has_innovation = innovation_manorialism }
+		}
+		AND = {
+			has_building_or_higher = logging_camps_04
+			culture = { has_cultural_parameter = watermills_forestries_unlock }
+		}
+	}
+	NOR = {
+		has_building_or_higher = windmills_01
+		has_building_or_higher = caravanserai_01
+	}
+}
+
+sb_can_upgrade_watermills_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watermills_01
+	NOT = { has_building_or_higher = watermills_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+		building_watermills_requirement_terrain = yes
+}
+
+sb_can_upgrade_watermills_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watermills_02
+	NOT = { has_building_or_higher = watermills_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+		building_watermills_requirement_terrain = yes
+}
+
+sb_can_upgrade_watermills_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watermills_03
+	NOT = { has_building_or_higher = watermills_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+		building_watermills_requirement_terrain = yes
+}
+
+sb_can_upgrade_watermills_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watermills_04
+	NOT = { has_building_or_higher = watermills_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+		building_watermills_requirement_terrain = yes
+}
+
+sb_can_upgrade_watermills_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watermills_05
+	NOT = { has_building_or_higher = watermills_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+		building_watermills_requirement_terrain = yes
+}
+
+sb_can_upgrade_watermills_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watermills_06
+	NOT = { has_building_or_higher = watermills_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+		building_watermills_requirement_terrain = yes
+}
+
+sb_can_upgrade_watermills_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watermills_07
+	NOT = { has_building_or_higher = watermills_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+		building_watermills_requirement_terrain = yes
+}
+
+sb_can_fill_windmills = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = windmills_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	OR = {
+		building_windmills_requirement_terrain = yes
+		AND = {
+			has_building_or_higher = hill_farms_04
+			culture = { has_cultural_parameter = windmills_hill_farms_unlock }
+		}
+	}
+	root.culture = { has_innovation = innovation_windmills }
+	NOR = {
+		has_building_or_higher = watermills_01
+		has_building_or_higher = caravanserai_01
+	}
+}
+
+sb_can_upgrade_windmills_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = windmills_01
+	NOT = { has_building_or_higher = windmills_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+		building_windmills_requirement_terrain = yes
+}
+
+sb_can_upgrade_windmills_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = windmills_02
+	NOT = { has_building_or_higher = windmills_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+		building_windmills_requirement_terrain = yes
+}
+
+sb_can_upgrade_windmills_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = windmills_03
+	NOT = { has_building_or_higher = windmills_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+		building_windmills_requirement_terrain = yes
+}
+
+sb_can_upgrade_windmills_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = windmills_04
+	NOT = { has_building_or_higher = windmills_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+		building_windmills_requirement_terrain = yes
+}
+
+sb_can_upgrade_windmills_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = windmills_05
+	NOT = { has_building_or_higher = windmills_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+		building_windmills_requirement_terrain = yes
+}
+
+sb_can_upgrade_windmills_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = windmills_06
+	NOT = { has_building_or_higher = windmills_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+		building_windmills_requirement_terrain = yes
+}
+
+sb_can_upgrade_windmills_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = windmills_07
+	NOT = { has_building_or_higher = windmills_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+		building_windmills_requirement_terrain = yes
+}
+
+sb_can_fill_caravanserai = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = caravanserai_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_caravanserai_requirement_terrain = yes
+	root.culture = { has_innovation = innovation_guilds }
+	NOR = {
+		has_building_or_higher = watermills_01
+		has_building_or_higher = windmills_01
+	}
+}
+
+sb_can_upgrade_caravanserai_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = caravanserai_01
+	NOT = { has_building_or_higher = caravanserai_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_caravanserai_requirement_terrain = yes
+}
+
+sb_can_upgrade_caravanserai_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = caravanserai_02
+	NOT = { has_building_or_higher = caravanserai_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_caravanserai_requirement_terrain = yes
+}
+
+sb_can_upgrade_caravanserai_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = caravanserai_03
+	NOT = { has_building_or_higher = caravanserai_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_caravanserai_requirement_terrain = yes
+}
+
+sb_can_upgrade_caravanserai_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = caravanserai_04
+	NOT = { has_building_or_higher = caravanserai_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_caravanserai_requirement_terrain = yes
+}
+
+sb_can_upgrade_caravanserai_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = caravanserai_05
+	NOT = { has_building_or_higher = caravanserai_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_caravanserai_requirement_terrain = yes
+}
+
+sb_can_upgrade_caravanserai_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = caravanserai_06
+	NOT = { has_building_or_higher = caravanserai_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_caravanserai_requirement_terrain = yes
+}
+
+sb_can_upgrade_caravanserai_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = caravanserai_07
+	NOT = { has_building_or_higher = caravanserai_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_caravanserai_requirement_terrain = yes
+}
+
+sb_can_fill_barracks = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = barracks_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_barracks_requirement_terrain = yes
+}
+
+sb_can_upgrade_barracks_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = barracks_01
+	NOT = { has_building_or_higher = barracks_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_barracks_requirement_terrain = yes
+}
+
+sb_can_upgrade_barracks_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = barracks_02
+	NOT = { has_building_or_higher = barracks_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_barracks_requirement_terrain = yes
+}
+
+sb_can_upgrade_barracks_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = barracks_03
+	NOT = { has_building_or_higher = barracks_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_barracks_requirement_terrain = yes
+}
+
+sb_can_upgrade_barracks_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = barracks_04
+	NOT = { has_building_or_higher = barracks_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_barracks_requirement_terrain = yes
+}
+
+sb_can_upgrade_barracks_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = barracks_05
+	NOT = { has_building_or_higher = barracks_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_barracks_requirement_terrain = yes
+}
+
+sb_can_upgrade_barracks_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = barracks_06
+	NOT = { has_building_or_higher = barracks_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_barracks_requirement_terrain = yes
+}
+
+sb_can_upgrade_barracks_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = barracks_07
+	NOT = { has_building_or_higher = barracks_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_barracks_requirement_terrain = yes
+}
+
+sb_can_fill_military_camps = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = military_camps_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_military_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_military_camps_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = military_camps_01
+	NOT = { has_building_or_higher = military_camps_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_military_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_military_camps_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = military_camps_02
+	NOT = { has_building_or_higher = military_camps_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_military_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_military_camps_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = military_camps_03
+	NOT = { has_building_or_higher = military_camps_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_military_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_military_camps_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = military_camps_04
+	NOT = { has_building_or_higher = military_camps_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_military_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_military_camps_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = military_camps_05
+	NOT = { has_building_or_higher = military_camps_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_military_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_military_camps_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = military_camps_06
+	NOT = { has_building_or_higher = military_camps_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_military_camps_requirement_terrain = yes
+}
+
+sb_can_upgrade_military_camps_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = military_camps_07
+	NOT = { has_building_or_higher = military_camps_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_military_camps_requirement_terrain = yes
+}
+
+sb_can_fill_stables = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = stables_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_stables_requirement_terrain = yes
+}
+
+sb_can_upgrade_stables_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = stables_01
+	NOT = { has_building_or_higher = stables_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_stables_requirement_terrain = yes
+}
+
+sb_can_upgrade_stables_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = stables_02
+	NOT = { has_building_or_higher = stables_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_stables_requirement_terrain = yes
+}
+
+sb_can_upgrade_stables_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = stables_03
+	NOT = { has_building_or_higher = stables_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_stables_requirement_terrain = yes
+}
+
+sb_can_upgrade_stables_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = stables_04
+	NOT = { has_building_or_higher = stables_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_stables_requirement_terrain = yes
+}
+
+sb_can_upgrade_stables_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = stables_05
+	NOT = { has_building_or_higher = stables_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_stables_requirement_terrain = yes
+}
+
+sb_can_upgrade_stables_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = stables_06
+	NOT = { has_building_or_higher = stables_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_stables_requirement_terrain = yes
+}
+
+sb_can_upgrade_stables_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = stables_07
+	NOT = { has_building_or_higher = stables_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_stables_requirement_terrain = yes
+}
+
+sb_can_fill_smiths = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = smiths_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_smiths_requirement_terrain = yes
+}
+
+sb_can_upgrade_smiths_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = smiths_01
+	NOT = { has_building_or_higher = smiths_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_smiths_requirement_terrain = yes
+}
+
+sb_can_upgrade_smiths_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = smiths_02
+	NOT = { has_building_or_higher = smiths_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_smiths_requirement_terrain = yes
+}
+
+sb_can_upgrade_smiths_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = smiths_03
+	NOT = { has_building_or_higher = smiths_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_smiths_requirement_terrain = yes
+}
+
+sb_can_upgrade_smiths_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = smiths_04
+	NOT = { has_building_or_higher = smiths_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_smiths_requirement_terrain = yes
+}
+
+sb_can_upgrade_smiths_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = smiths_05
+	NOT = { has_building_or_higher = smiths_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_smiths_requirement_terrain = yes
+}
+
+sb_can_upgrade_smiths_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = smiths_06
+	NOT = { has_building_or_higher = smiths_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_smiths_requirement_terrain = yes
+}
+
+sb_can_upgrade_smiths_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = smiths_07
+	NOT = { has_building_or_higher = smiths_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_smiths_requirement_terrain = yes
+}
+
+sb_can_fill_outposts = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = outposts_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_outposts_requirement_terrain = yes
+}
+
+sb_can_upgrade_outposts_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = outposts_01
+	NOT = { has_building_or_higher = outposts_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_outposts_requirement_terrain = yes
+}
+
+sb_can_upgrade_outposts_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = outposts_02
+	NOT = { has_building_or_higher = outposts_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_outposts_requirement_terrain = yes
+}
+
+sb_can_upgrade_outposts_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = outposts_03
+	NOT = { has_building_or_higher = outposts_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_outposts_requirement_terrain = yes
+}
+
+sb_can_upgrade_outposts_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = outposts_04
+	NOT = { has_building_or_higher = outposts_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_outposts_requirement_terrain = yes
+}
+
+sb_can_upgrade_outposts_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = outposts_05
+	NOT = { has_building_or_higher = outposts_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_outposts_requirement_terrain = yes
+}
+
+sb_can_upgrade_outposts_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = outposts_06
+	NOT = { has_building_or_higher = outposts_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_outposts_requirement_terrain = yes
+}
+
+sb_can_upgrade_outposts_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = outposts_07
+	NOT = { has_building_or_higher = outposts_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_outposts_requirement_terrain = yes
+}
+
+sb_can_fill_camel_farms = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = camel_farms_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_camel_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_camel_farms_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = camel_farms_01
+	NOT = { has_building_or_higher = camel_farms_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_camel_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_camel_farms_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = camel_farms_02
+	NOT = { has_building_or_higher = camel_farms_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_camel_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_camel_farms_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = camel_farms_03
+	NOT = { has_building_or_higher = camel_farms_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_camel_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_camel_farms_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = camel_farms_04
+	NOT = { has_building_or_higher = camel_farms_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_camel_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_camel_farms_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = camel_farms_05
+	NOT = { has_building_or_higher = camel_farms_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_camel_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_camel_farms_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = camel_farms_06
+	NOT = { has_building_or_higher = camel_farms_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_camel_farms_requirement_terrain = yes
+}
+
+sb_can_upgrade_camel_farms_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = camel_farms_07
+	NOT = { has_building_or_higher = camel_farms_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_camel_farms_requirement_terrain = yes
+}
+
+sb_can_fill_regimental_grounds = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = regimental_grounds_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_regimental_grounds_requirement_terrain = yes
+}
+
+sb_can_upgrade_regimental_grounds_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = regimental_grounds_01
+	NOT = { has_building_or_higher = regimental_grounds_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_regimental_grounds_requirement_terrain = yes
+}
+
+sb_can_upgrade_regimental_grounds_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = regimental_grounds_02
+	NOT = { has_building_or_higher = regimental_grounds_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_regimental_grounds_requirement_terrain = yes
+}
+
+sb_can_upgrade_regimental_grounds_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = regimental_grounds_03
+	NOT = { has_building_or_higher = regimental_grounds_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_regimental_grounds_requirement_terrain = yes
+}
+
+sb_can_upgrade_regimental_grounds_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = regimental_grounds_04
+	NOT = { has_building_or_higher = regimental_grounds_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_regimental_grounds_requirement_terrain = yes
+}
+
+sb_can_upgrade_regimental_grounds_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = regimental_grounds_05
+	NOT = { has_building_or_higher = regimental_grounds_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_regimental_grounds_requirement_terrain = yes
+}
+
+sb_can_upgrade_regimental_grounds_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = regimental_grounds_06
+	NOT = { has_building_or_higher = regimental_grounds_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_regimental_grounds_requirement_terrain = yes
+}
+
+sb_can_upgrade_regimental_grounds_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = regimental_grounds_07
+	NOT = { has_building_or_higher = regimental_grounds_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_regimental_grounds_requirement_terrain = yes
+}
+
+sb_can_fill_workshops = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = workshops_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_workshops_requirement_terrain = yes
+	root.culture = { has_innovation = innovation_advanced_bowmaking }
+}
+
+sb_can_upgrade_workshops_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = workshops_01
+	NOT = { has_building_or_higher = workshops_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_workshops_requirement_terrain = yes
+}
+
+sb_can_upgrade_workshops_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = workshops_02
+	NOT = { has_building_or_higher = workshops_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_workshops_requirement_terrain = yes
+}
+
+sb_can_upgrade_workshops_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = workshops_03
+	NOT = { has_building_or_higher = workshops_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_workshops_requirement_terrain = yes
+}
+
+sb_can_upgrade_workshops_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = workshops_04
+	NOT = { has_building_or_higher = workshops_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_workshops_requirement_terrain = yes
+}
+
+sb_can_upgrade_workshops_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = workshops_05
+	NOT = { has_building_or_higher = workshops_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_workshops_requirement_terrain = yes
+}
+
+sb_can_upgrade_workshops_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = workshops_06
+	NOT = { has_building_or_higher = workshops_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_workshops_requirement_terrain = yes
+}
+
+sb_can_upgrade_workshops_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = workshops_07
+	NOT = { has_building_or_higher = workshops_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_workshops_requirement_terrain = yes
+}
+
+sb_can_fill_warrior_lodges = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = warrior_lodges_01 }
+	building_warrior_lodges_requirement_terrain = yes
+	NOT = { has_holding_type = tribal_holding }
+}
+
+sb_can_upgrade_warrior_lodges_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = warrior_lodges_01
+	NOT = { has_building_or_higher = warrior_lodges_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_warrior_lodges_requirement_terrain = yes
+}
+
+sb_can_upgrade_warrior_lodges_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = warrior_lodges_02
+	NOT = { has_building_or_higher = warrior_lodges_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_warrior_lodges_requirement_terrain = yes
+}
+
+sb_can_upgrade_warrior_lodges_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = warrior_lodges_03
+	NOT = { has_building_or_higher = warrior_lodges_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_warrior_lodges_requirement_terrain = yes
+}
+
+sb_can_upgrade_warrior_lodges_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = warrior_lodges_04
+	NOT = { has_building_or_higher = warrior_lodges_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_warrior_lodges_requirement_terrain = yes
+}
+
+sb_can_upgrade_warrior_lodges_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = warrior_lodges_05
+	NOT = { has_building_or_higher = warrior_lodges_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_warrior_lodges_requirement_terrain = yes
+}
+
+sb_can_upgrade_warrior_lodges_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = warrior_lodges_06
+	NOT = { has_building_or_higher = warrior_lodges_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_warrior_lodges_requirement_terrain = yes
+}
+
+sb_can_upgrade_warrior_lodges_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = warrior_lodges_07
+	NOT = { has_building_or_higher = warrior_lodges_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_warrior_lodges_requirement_terrain = yes
+}
+
+sb_can_fill_horse_pastures = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = horse_pastures_01 }
+	building_horse_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_horse_pastures_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = horse_pastures_01
+	NOT = { has_building_or_higher = horse_pastures_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_horse_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_horse_pastures_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = horse_pastures_02
+	NOT = { has_building_or_higher = horse_pastures_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_horse_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_horse_pastures_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = horse_pastures_03
+	NOT = { has_building_or_higher = horse_pastures_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_horse_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_horse_pastures_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = horse_pastures_04
+	NOT = { has_building_or_higher = horse_pastures_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_horse_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_horse_pastures_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = horse_pastures_05
+	NOT = { has_building_or_higher = horse_pastures_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_horse_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_horse_pastures_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = horse_pastures_06
+	NOT = { has_building_or_higher = horse_pastures_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_horse_pastures_requirement_terrain = yes
+}
+
+sb_can_upgrade_horse_pastures_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = horse_pastures_07
+	NOT = { has_building_or_higher = horse_pastures_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_horse_pastures_requirement_terrain = yes
+}
+
+sb_can_fill_hillside_grazing = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = hillside_grazing_01 }
+	building_hillside_grazing_requirement_terrain = yes
+}
+
+sb_can_upgrade_hillside_grazing_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hillside_grazing_01
+	NOT = { has_building_or_higher = hillside_grazing_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_hillside_grazing_requirement_terrain = yes
+}
+
+sb_can_upgrade_hillside_grazing_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hillside_grazing_02
+	NOT = { has_building_or_higher = hillside_grazing_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_hillside_grazing_requirement_terrain = yes
+}
+
+sb_can_upgrade_hillside_grazing_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hillside_grazing_03
+	NOT = { has_building_or_higher = hillside_grazing_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_hillside_grazing_requirement_terrain = yes
+}
+
+sb_can_upgrade_hillside_grazing_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hillside_grazing_04
+	NOT = { has_building_or_higher = hillside_grazing_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_hillside_grazing_requirement_terrain = yes
+}
+
+sb_can_upgrade_hillside_grazing_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hillside_grazing_05
+	NOT = { has_building_or_higher = hillside_grazing_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_hillside_grazing_requirement_terrain = yes
+}
+
+sb_can_upgrade_hillside_grazing_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hillside_grazing_06
+	NOT = { has_building_or_higher = hillside_grazing_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_hillside_grazing_requirement_terrain = yes
+}
+
+sb_can_upgrade_hillside_grazing_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hillside_grazing_07
+	NOT = { has_building_or_higher = hillside_grazing_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_hillside_grazing_requirement_terrain = yes
+}
+
+sb_can_fill_wind_furnace = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = wind_furnace_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_wind_furnace_requirement_terrain = yes
+}
+
+sb_can_upgrade_wind_furnace_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = wind_furnace_01
+	NOT = { has_building_or_higher = wind_furnace_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_wind_furnace_requirement_terrain = yes
+}
+
+sb_can_upgrade_wind_furnace_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = wind_furnace_02
+	NOT = { has_building_or_higher = wind_furnace_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_wind_furnace_requirement_terrain = yes
+}
+
+sb_can_upgrade_wind_furnace_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = wind_furnace_03
+	NOT = { has_building_or_higher = wind_furnace_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_wind_furnace_requirement_terrain = yes
+}
+
+sb_can_upgrade_wind_furnace_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = wind_furnace_04
+	NOT = { has_building_or_higher = wind_furnace_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_wind_furnace_requirement_terrain = yes
+}
+
+sb_can_upgrade_wind_furnace_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = wind_furnace_05
+	NOT = { has_building_or_higher = wind_furnace_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_wind_furnace_requirement_terrain = yes
+}
+
+sb_can_upgrade_wind_furnace_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = wind_furnace_06
+	NOT = { has_building_or_higher = wind_furnace_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_wind_furnace_requirement_terrain = yes
+}
+
+sb_can_upgrade_wind_furnace_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = wind_furnace_07
+	NOT = { has_building_or_higher = wind_furnace_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_wind_furnace_requirement_terrain = yes
+}
+
+sb_can_fill_powder_magazine = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = powder_magazine_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	root.culture = { has_cultural_parameter = unlock_powder_magazines }
+}
+
+sb_can_upgrade_powder_magazine_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = powder_magazine_01
+	NOT = { has_building_or_higher = powder_magazine_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+}
+
+sb_can_upgrade_powder_magazine_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = powder_magazine_02
+	NOT = { has_building_or_higher = powder_magazine_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+}
+
+sb_can_upgrade_powder_magazine_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = powder_magazine_03
+	NOT = { has_building_or_higher = powder_magazine_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+}
+
+sb_can_upgrade_powder_magazine_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = powder_magazine_04
+	NOT = { has_building_or_higher = powder_magazine_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+}
+
+sb_can_upgrade_powder_magazine_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = powder_magazine_05
+	NOT = { has_building_or_higher = powder_magazine_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+}
+
+sb_can_upgrade_powder_magazine_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = powder_magazine_06
+	NOT = { has_building_or_higher = powder_magazine_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+}
+
+sb_can_upgrade_powder_magazine_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = powder_magazine_07
+	NOT = { has_building_or_higher = powder_magazine_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+}
+
+sb_can_fill_ramparts = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = ramparts_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_ramparts_requirement_terrain = yes
+}
+
+sb_can_upgrade_ramparts_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = ramparts_01
+	NOT = { has_building_or_higher = ramparts_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_ramparts_requirement_terrain = yes
+}
+
+sb_can_upgrade_ramparts_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = ramparts_02
+	NOT = { has_building_or_higher = ramparts_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_ramparts_requirement_terrain = yes
+}
+
+sb_can_upgrade_ramparts_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = ramparts_03
+	NOT = { has_building_or_higher = ramparts_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_ramparts_requirement_terrain = yes
+}
+
+sb_can_upgrade_ramparts_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = ramparts_04
+	NOT = { has_building_or_higher = ramparts_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_ramparts_requirement_terrain = yes
+}
+
+sb_can_upgrade_ramparts_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = ramparts_05
+	NOT = { has_building_or_higher = ramparts_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_ramparts_requirement_terrain = yes
+}
+
+sb_can_upgrade_ramparts_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = ramparts_06
+	NOT = { has_building_or_higher = ramparts_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_ramparts_requirement_terrain = yes
+}
+
+sb_can_upgrade_ramparts_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = ramparts_07
+	NOT = { has_building_or_higher = ramparts_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_ramparts_requirement_terrain = yes
+}
+
+sb_can_fill_curtain_walls = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = curtain_walls_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_curtain_walls_requirement_terrain = yes
+}
+
+sb_can_upgrade_curtain_walls_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = curtain_walls_01
+	NOT = { has_building_or_higher = curtain_walls_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_curtain_walls_requirement_terrain = yes
+}
+
+sb_can_upgrade_curtain_walls_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = curtain_walls_02
+	NOT = { has_building_or_higher = curtain_walls_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_curtain_walls_requirement_terrain = yes
+}
+
+sb_can_upgrade_curtain_walls_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = curtain_walls_03
+	NOT = { has_building_or_higher = curtain_walls_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_curtain_walls_requirement_terrain = yes
+}
+
+sb_can_upgrade_curtain_walls_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = curtain_walls_04
+	NOT = { has_building_or_higher = curtain_walls_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_curtain_walls_requirement_terrain = yes
+}
+
+sb_can_upgrade_curtain_walls_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = curtain_walls_05
+	NOT = { has_building_or_higher = curtain_walls_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_curtain_walls_requirement_terrain = yes
+}
+
+sb_can_upgrade_curtain_walls_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = curtain_walls_06
+	NOT = { has_building_or_higher = curtain_walls_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_curtain_walls_requirement_terrain = yes
+}
+
+sb_can_upgrade_curtain_walls_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = curtain_walls_07
+	NOT = { has_building_or_higher = curtain_walls_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_curtain_walls_requirement_terrain = yes
+}
+
+sb_can_fill_watchtowers = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = watchtowers_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_watchtowers_requirement_terrain = yes
+}
+
+sb_can_upgrade_watchtowers_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watchtowers_01
+	NOT = { has_building_or_higher = watchtowers_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_watchtowers_requirement_terrain = yes
+}
+
+sb_can_upgrade_watchtowers_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watchtowers_02
+	NOT = { has_building_or_higher = watchtowers_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_watchtowers_requirement_terrain = yes
+}
+
+sb_can_upgrade_watchtowers_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watchtowers_03
+	NOT = { has_building_or_higher = watchtowers_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_watchtowers_requirement_terrain = yes
+}
+
+sb_can_upgrade_watchtowers_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watchtowers_04
+	NOT = { has_building_or_higher = watchtowers_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_watchtowers_requirement_terrain = yes
+}
+
+sb_can_upgrade_watchtowers_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watchtowers_05
+	NOT = { has_building_or_higher = watchtowers_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_watchtowers_requirement_terrain = yes
+}
+
+sb_can_upgrade_watchtowers_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watchtowers_06
+	NOT = { has_building_or_higher = watchtowers_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_watchtowers_requirement_terrain = yes
+}
+
+sb_can_upgrade_watchtowers_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = watchtowers_07
+	NOT = { has_building_or_higher = watchtowers_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_watchtowers_requirement_terrain = yes
+}
+
+sb_can_fill_hill_forts = {
+	sb_province_is_fillable = yes
+	NOT = { has_building_or_higher = hill_forts_01 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_hill_forts_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_forts_01 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_forts_01
+	NOT = { has_building_or_higher = hill_forts_02 }
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	building_hill_forts_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_forts_02 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_forts_02
+	NOT = { has_building_or_higher = hill_forts_03 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_hill_forts_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_forts_03 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_forts_03
+	NOT = { has_building_or_higher = hill_forts_04 }
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	building_hill_forts_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_forts_04 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_forts_04
+	NOT = { has_building_or_higher = hill_forts_05 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_hill_forts_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_forts_05 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_forts_05
+	NOT = { has_building_or_higher = hill_forts_06 }
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	building_hill_forts_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_forts_06 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_forts_06
+	NOT = { has_building_or_higher = hill_forts_07 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_hill_forts_requirement_terrain = yes
+}
+
+sb_can_upgrade_hill_forts_07 = {
+	sb_province_is_upgradable_holding = yes
+	has_building = hill_forts_07
+	NOT = { has_building_or_higher = hill_forts_08 }
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	building_hill_forts_requirement_terrain = yes
+}
+
