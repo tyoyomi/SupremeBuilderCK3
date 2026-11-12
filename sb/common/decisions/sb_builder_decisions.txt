@@ -1,0 +1,67 @@
+# Supreme Builder — Fill Empty + Upgrade Domain (player-only; SS trait gate)
+
+sb_fill_empty_domain_slots_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
+	decision_group_type = sb_supreme_builder
+	desc = sb_fill_empty_domain_slots_decision_desc
+	selection_tooltip = sb_fill_empty_domain_slots_decision_tooltip
+	confirm_text = sb_fill_empty_domain_slots_decision_confirm
+
+	ai_check_interval = 0
+
+	is_shown = {
+		sb_is_player_sovereign = yes
+		sb_has_domain_holding = yes
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = sb_tt_domain_has_fillable_slot
+			sb_domain_has_fillable_slot = yes
+		}
+	}
+
+	effect = {
+		custom_tooltip = sb_fill_empty_domain_slots_decision_effect_tt
+		sb_compute_fill_plan_effect = yes
+		trigger_event = sb_builder.1001
+	}
+
+	ai_potential = { always = no }
+	ai_will_do = { base = 0 }
+}
+
+sb_upgrade_domain_buildings_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
+	decision_group_type = sb_supreme_builder
+	desc = sb_upgrade_domain_buildings_decision_desc
+	selection_tooltip = sb_upgrade_domain_buildings_decision_tooltip
+	confirm_text = sb_upgrade_domain_buildings_decision_confirm
+
+	ai_check_interval = 0
+
+	is_shown = {
+		sb_is_player_sovereign = yes
+		sb_has_domain_holding = yes
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = sb_tt_domain_has_upgradable_building
+			sb_domain_has_upgradable_building = yes
+		}
+	}
+
+	effect = {
+		custom_tooltip = sb_upgrade_domain_buildings_decision_effect_tt
+		sb_compute_upgrade_plan_effect = yes
+		trigger_event = sb_builder.1002
+	}
+
+	ai_potential = { always = no }
+	ai_will_do = { base = 0 }
+}

@@ -1,0 +1,7 @@
+# Supreme Builder — branded decision fold (suite R1 chrome)
+
+sb_supreme_builder = {
+	sort_order = 193
+	gui_tags = { big_button }
+	important_decision_group = yes
+}

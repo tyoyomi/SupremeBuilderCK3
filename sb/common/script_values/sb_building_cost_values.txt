@@ -1,0 +1,269 @@
+# Supreme Builder — construction gold costs
+# Base: vanilla cheap/normal/expensive_building_tier_N_cost
+# D2: character-level whitelist (Architect, perks, dynasty, faith, law, culture)
+# D1 spike: province build_gold_cost (+ holding-type) layered for local radiators
+# Character-scope build_gold_cost is NOT layered on top of D2 (avoids double-counting Architect).
+
+# Sum of known percent deltas (negative = cheaper). Character scope.
+sb_d2_discount_delta = {
+	value = 0
+	if = {
+		limit = { has_trait = architect }
+		add = -0.10
+	}
+	if = {
+		limit = { has_perk = cutting_corners_perk }
+		add = -0.05
+	}
+	if = {
+		limit = {
+			exists = dynasty
+			dynasty = { has_dynasty_perk = law_legacy_3 }
+		}
+		add = -0.05
+	}
+	if = {
+		limit = {
+			exists = faith
+			faith = { has_doctrine = tenet_communal_possessions }
+		}
+		add = -0.10
+	}
+	if = {
+		limit = { has_realm_law = manor_reform_law }
+		add = -0.15
+	}
+	if = {
+		limit = {
+			exists = culture
+			culture = { has_cultural_tradition = tradition_artisans }
+		}
+		add = -0.05
+	}
+	if = {
+		limit = {
+			exists = culture
+			culture = { has_cultural_pillar = ethos_communal }
+		}
+		add = -0.05
+	}
+	if = {
+		limit = {
+			exists = culture
+			culture = { has_cultural_tradition = tradition_hard_working }
+		}
+		add = 0.15
+	}
+}
+
+# D1 spike — character aggregate (TEST: enable in place of D2 if readable and preferred)
+sb_d1_character_build_gold_cost = {
+	value = build_gold_cost
+}
+
+# Province-local D1 (watermills etc.). Evaluate with prev = province from character set_variable.
+sb_d1_province_build_gold_cost = {
+	value = 0
+	if = {
+		limit = { exists = prev }
+		add = prev.build_gold_cost
+		if = {
+			limit = { prev = { has_holding_type = castle_holding } }
+			add = prev.castle_holding_build_gold_cost
+		}
+		if = {
+			limit = { prev = { has_holding_type = city_holding } }
+			add = prev.city_holding_build_gold_cost
+		}
+		if = {
+			limit = {
+				prev = {
+					OR = {
+						has_holding_type = church_holding
+						has_holding_type = temple_citadel_holding
+					}
+				}
+			}
+			add = prev.church_holding_build_gold_cost
+		}
+	}
+}
+
+sb_discount_multiplier = {
+	value = 1
+	add = sb_d2_discount_delta
+	add = sb_d1_province_build_gold_cost
+	min = 0.05
+	max = 3.0
+}
+
+sb_cost_cheap_tier_1 = {
+	value = cheap_building_tier_1_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_cheap_tier_2 = {
+	value = cheap_building_tier_2_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_cheap_tier_3 = {
+	value = cheap_building_tier_3_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_cheap_tier_4 = {
+	value = cheap_building_tier_4_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_cheap_tier_5 = {
+	value = cheap_building_tier_5_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_cheap_tier_6 = {
+	value = cheap_building_tier_6_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_cheap_tier_7 = {
+	value = cheap_building_tier_7_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_cheap_tier_8 = {
+	value = cheap_building_tier_8_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+
+sb_cost_normal_tier_1 = {
+	value = normal_building_tier_1_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_normal_tier_2 = {
+	value = normal_building_tier_2_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_normal_tier_3 = {
+	value = normal_building_tier_3_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_normal_tier_4 = {
+	value = normal_building_tier_4_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_normal_tier_5 = {
+	value = normal_building_tier_5_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_normal_tier_6 = {
+	value = normal_building_tier_6_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_normal_tier_7 = {
+	value = normal_building_tier_7_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_normal_tier_8 = {
+	value = normal_building_tier_8_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+
+sb_cost_expensive_tier_1 = {
+	value = expensive_building_tier_1_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_expensive_tier_2 = {
+	value = expensive_building_tier_2_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_expensive_tier_3 = {
+	value = expensive_building_tier_3_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_expensive_tier_4 = {
+	value = expensive_building_tier_4_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_expensive_tier_5 = {
+	value = expensive_building_tier_5_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_expensive_tier_6 = {
+	value = expensive_building_tier_6_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_expensive_tier_7 = {
+	value = expensive_building_tier_7_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}
+sb_cost_expensive_tier_8 = {
+	value = expensive_building_tier_8_cost
+	multiply = sb_discount_multiplier
+	round = yes
+	min = 0
+	max = 100000
+}

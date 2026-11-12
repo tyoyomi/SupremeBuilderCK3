@@ -1,0 +1,1090 @@
+# Supreme Builder — Fill Empty (C1 affordable / C2 all-or-nothing)
+
+sb_fill_affordable_effect = {
+	set_variable = { name = sb_built_count value = 0 }
+	set_variable = { name = sb_spent_gold value = 0 }
+	every_directly_owned_province = {
+		limit = { sb_province_is_fillable = yes }
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_cereal_fields = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = cereal_fields_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_pastures = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = pastures_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_hunting_grounds = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = hunting_grounds_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_logging_camps = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = logging_camps_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_peat_quarries = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = peat_quarries_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_quarries = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = quarries_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_orchards = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = orchards_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_hill_farms = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = hill_farms_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_plantations = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = plantations_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_elephant_pens = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = elephant_pens_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_farm_estates = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = farm_estates_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_paddy_fields = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = paddy_fields_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_common_tradeport = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = common_tradeport_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_qanats = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = qanats_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_murex_farm = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = murex_farm_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_spice_plantation = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = spice_plantation_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_waterworks = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = waterworks_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_watermills = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_expensive_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = watermills_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_windmills = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_expensive_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = windmills_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_caravanserai = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_expensive_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = caravanserai_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_barracks = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = barracks_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_military_camps = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = military_camps_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_stables = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = stables_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_smiths = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = smiths_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_outposts = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = outposts_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_camel_farms = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = camel_farms_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_regimental_grounds = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_expensive_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = regimental_grounds_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_workshops = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_expensive_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = workshops_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_warrior_lodges = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = warrior_lodges_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_horse_pastures = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = horse_pastures_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_hillside_grazing = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = hillside_grazing_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_wind_furnace = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = wind_furnace_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_powder_magazine = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = powder_magazine_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_ramparts = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = ramparts_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_curtain_walls = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = curtain_walls_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_watchtowers = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = watchtowers_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_hill_forts = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				if = {
+					limit = { gold >= var:sb_placement_cost }
+					remove_short_term_gold = var:sb_placement_cost
+					prev = { add_building = hill_forts_01 }
+					change_variable = { name = sb_built_count add = 1 }
+					change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+				}
+			}
+		}
+	}
+}
+
+sb_fill_all_effect = {
+	set_variable = { name = sb_built_count value = 0 }
+	set_variable = { name = sb_spent_gold value = 0 }
+	every_directly_owned_province = {
+		limit = { sb_province_is_fillable = yes }
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_cereal_fields = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = cereal_fields_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_pastures = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = pastures_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_hunting_grounds = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = hunting_grounds_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_logging_camps = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = logging_camps_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_peat_quarries = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = peat_quarries_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_quarries = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = quarries_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_orchards = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = orchards_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_hill_farms = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = hill_farms_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_plantations = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = plantations_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_elephant_pens = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = elephant_pens_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_farm_estates = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = farm_estates_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_paddy_fields = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = paddy_fields_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_common_tradeport = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = common_tradeport_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_qanats = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = qanats_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_murex_farm = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = murex_farm_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_spice_plantation = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = spice_plantation_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_waterworks = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = waterworks_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_watermills = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_expensive_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = watermills_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_windmills = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_expensive_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = windmills_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_caravanserai = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_expensive_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = caravanserai_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_barracks = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = barracks_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_military_camps = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = military_camps_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_stables = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = stables_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_smiths = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = smiths_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_outposts = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = outposts_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_camel_farms = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = camel_farms_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_regimental_grounds = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_expensive_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = regimental_grounds_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_workshops = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_expensive_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = workshops_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_warrior_lodges = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = warrior_lodges_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_horse_pastures = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = horse_pastures_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_hillside_grazing = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = hillside_grazing_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_wind_furnace = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = wind_furnace_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_powder_magazine = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_normal_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = powder_magazine_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_ramparts = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = ramparts_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_curtain_walls = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = curtain_walls_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_watchtowers = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = watchtowers_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+		if = {
+			limit = {
+				free_building_slots > 0
+				sb_can_fill_hill_forts = yes
+			}
+			root = {
+				set_variable = { name = sb_placement_cost value = sb_cost_cheap_tier_1 }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = { add_building = hill_forts_01 }
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+	}
+}
