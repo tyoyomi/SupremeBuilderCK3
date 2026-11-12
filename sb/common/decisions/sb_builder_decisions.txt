@@ -1,4 +1,4 @@
-# Supreme Builder — Fill Empty + Upgrade Domain (player-only; SS trait gate)
+# Supreme Builder — Fill Empty + Upgrade Domain + Feudalize Holdings (player-only; SS trait gate)
 
 sb_fill_empty_domain_slots_decision = {
 	picture = {
@@ -60,6 +60,40 @@ sb_upgrade_domain_buildings_decision = {
 		custom_tooltip = sb_upgrade_domain_buildings_decision_effect_tt
 		sb_compute_upgrade_plan_effect = yes
 		trigger_event = sb_builder.1002
+	}
+
+	ai_potential = { always = no }
+	ai_will_do = { base = 0 }
+}
+
+sb_feudalize_domain_holdings_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
+	decision_group_type = sb_supreme_builder
+	desc = sb_feudalize_domain_holdings_decision_desc
+	selection_tooltip = sb_feudalize_domain_holdings_decision_tooltip
+	confirm_text = sb_feudalize_domain_holdings_decision_confirm
+
+	ai_check_interval = 0
+
+	is_shown = {
+		sb_is_player_sovereign = yes
+		sb_has_domain_holding = yes
+		sb_can_feudalize_government = yes
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = sb_tt_domain_has_feudalizable_holding
+			sb_domain_has_feudalizable_holding = yes
+		}
+	}
+
+	effect = {
+		custom_tooltip = sb_feudalize_domain_holdings_decision_effect_tt
+		sb_compute_feudalize_plan_effect = yes
+		trigger_event = sb_builder.1003
 	}
 
 	ai_potential = { always = no }

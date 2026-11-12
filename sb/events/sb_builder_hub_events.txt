@@ -85,3 +85,46 @@ sb_builder.1002 = {
 		custom_tooltip = sb_builder.tt.result
 	}
 }
+
+# Feudalize Domain Holdings — cost mode hub
+sb_builder.1003 = {
+	type = character_event
+	title = sb_builder.1003.t
+	theme = realm
+	override_background = { reference = throne_room }
+
+	desc = sb_builder.1003.desc
+
+	immediate = {
+		sb_compute_feudalize_plan_effect = yes
+	}
+
+	option = {
+		name = sb_builder.1003.close
+		custom_tooltip = sb_builder.tt.close
+	}
+
+	option = {
+		name = sb_builder.1003.c1
+		custom_tooltip = sb_builder.tt.feudalize_c1
+		trigger = {
+			var:sb_plan_count > 0
+		}
+		sb_feudalize_affordable_effect = yes
+		custom_tooltip = sb_builder.tt.feudalize_result
+	}
+
+	option = {
+		name = sb_builder.1003.c2
+		custom_tooltip = sb_builder.tt.feudalize_c2
+		trigger = {
+			custom_tooltip = {
+				text = sb_tt_can_afford_feudalize_plan
+				var:sb_plan_count > 0
+				sb_can_afford_feudalize_plan = yes
+			}
+		}
+		sb_feudalize_all_effect = yes
+		custom_tooltip = sb_builder.tt.feudalize_result
+	}
+}

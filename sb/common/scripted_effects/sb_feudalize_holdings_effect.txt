@@ -1,0 +1,53 @@
+# Supreme Builder — Feudalize Domain Holdings (C1 affordable / C2 all-or-nothing)
+# Tribal / Nomad / Herder → castle_holding via holding_pre_feudalize_effect
+
+sb_compute_feudalize_plan_effect = {
+	sb_reset_plan_vars_effect = yes
+	every_directly_owned_province = {
+		limit = { sb_province_is_feudalizable = yes }
+		root = {
+			set_variable = { name = sb_placement_cost value = sb_feudalize_holding_cost }
+			change_variable = { name = sb_plan_cost add = var:sb_placement_cost }
+			change_variable = { name = sb_plan_count add = 1 }
+		}
+	}
+}
+
+sb_feudalize_affordable_effect = {
+	set_variable = { name = sb_built_count value = 0 }
+	set_variable = { name = sb_spent_gold value = 0 }
+	every_directly_owned_province = {
+		limit = { sb_province_is_feudalizable = yes }
+		root = {
+			set_variable = { name = sb_placement_cost value = sb_feudalize_holding_cost }
+			if = {
+				limit = { gold >= var:sb_placement_cost }
+				remove_short_term_gold = var:sb_placement_cost
+				prev = {
+					holding_pre_feudalize_effect = yes
+					set_holding_type = castle_holding
+				}
+				change_variable = { name = sb_built_count add = 1 }
+				change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+			}
+		}
+	}
+}
+
+sb_feudalize_all_effect = {
+	set_variable = { name = sb_built_count value = 0 }
+	set_variable = { name = sb_spent_gold value = 0 }
+	every_directly_owned_province = {
+		limit = { sb_province_is_feudalizable = yes }
+		root = {
+			set_variable = { name = sb_placement_cost value = sb_feudalize_holding_cost }
+			remove_short_term_gold = var:sb_placement_cost
+			prev = {
+				holding_pre_feudalize_effect = yes
+				set_holding_type = castle_holding
+			}
+			change_variable = { name = sb_built_count add = 1 }
+			change_variable = { name = sb_spent_gold add = var:sb_placement_cost }
+		}
+	}
+}

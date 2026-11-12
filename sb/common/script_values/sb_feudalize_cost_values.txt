@@ -1,0 +1,34 @@
+# Supreme Builder — Feudalize Domain Holdings gold costs
+# Mirrors Feudalize Holding button parity: same culture 200 / different 500 /
+# Siberian Permafrost 2500. Evaluated in character scope with prev = province.
+
+sb_feudalize_holding_cost = {
+	value = 500
+	if = {
+		limit = {
+			exists = prev
+			prev = {
+				exists = county
+				county = {
+					OR = {
+						has_county_modifier = mpo_siberian_permafrost_modifier
+						has_county_modifier = mpo_siberian_permafrost_modifier_bad
+					}
+				}
+			}
+		}
+		value = 2500
+	}
+	else_if = {
+		limit = {
+			exists = prev
+			exists = culture
+			exists = prev.culture
+			culture = prev.culture
+		}
+		value = 200
+	}
+	round = yes
+	min = 0
+	max = 100000
+}
